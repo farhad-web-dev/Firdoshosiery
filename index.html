@@ -6,6 +6,10 @@
     <title>Firdos Hosiery | Quality Garments</title>
     <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="YiTXofXgzL0b7BNLz76ZjfKQMBqYHdvXebNpvTJ4Ymk" />
+    
+    <!-- Favicon Logo Setup -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
     <style>
         :root {
             --primary: #b91c1c; /* Deep Red Theme */
@@ -28,10 +32,10 @@
             line-height: 1.6;
         }
 
-        /* Navbar */
+        /* Navbar with Logo Image */
         nav {
             background-color: white;
-            padding: 15px 20px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,7 +45,23 @@
             z-index: 1000;
         }
 
-        nav .logo {
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        nav .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary);
@@ -192,9 +212,12 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Custom Logo -->
     <nav>
-        <div class="logo">Firdos Hosiery</div>
+        <a href="#" class="nav-brand">
+            <img src="logo.jpg" alt="Firdos Hosiery Logo" class="nav-logo-img">
+            <span class="logo-text">Firdos Hosiery</span>
+        </a>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#products">Products</a></li>
@@ -251,7 +274,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    /* Footer */
     <footer>
         <p>&copy; 2026 Firdos Hosiery. All Rights Reserved.</p>
         <p style="margin-top: 5px; font-size: 0.8rem;">Developed by <a href="https://github.com/farhad-web-dev" target="_blank" style="color: white; text-decoration: underline;">farhad-web-dev</a></p>
