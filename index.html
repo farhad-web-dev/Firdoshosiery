@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firdos Hosiery</title>
-    <!-- Favicon (Browser Tab Logo) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="ahmed.jpg">
     <style>
         * {
@@ -15,97 +15,257 @@
         }
 
         body {
-            background-color: #0b0614;
-            color: #ffffff;
+            background-color: #f9f9f9;
+            color: #333333;
             overflow-x: hidden;
-            padding: 15px;
         }
 
-        .hero-banner {
+        /* Header / Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #8b0000;
+            line-height: 1.1;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b30000;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+            padding: 60px 20px;
             text-align: center;
-            padding: 25px 15px;
-            background: radial-gradient(circle, rgba(20,14,35,0.95) 0%, rgba(5,3,10,0.98) 100%);
-            border: 1px solid rgba(0, 243, 255, 0.3);
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #ffffff;
         }
 
-        .logo-img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 2px solid #00f3ff;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            color: #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            background-color: #b30000;
+            color: #ffffff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(179, 0, 0, 0.4);
+            transition: 0.3s;
+        }
+
+        .explore-btn:hover {
+            background-color: #8b0000;
+        }
+
+        /* Featured Categories Section */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #111827;
+            margin: 40px 0 10px 0;
+        }
+
+        .title-underline {
+            width: 60px;
+            height: 3px;
+            background-color: #b30000;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Products Grid */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border: 1px solid #eaeaea;
+        }
+
+        .product-header {
+            background: #ffeef0;
+            color: #b30000;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .product-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-body h3 {
+            font-size: 1.3rem;
+            color: #111827;
             margin-bottom: 10px;
         }
 
-        .hero-title {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #00f3ff;
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle {
+        .product-body p {
+            color: #555555;
             font-size: 0.95rem;
-            color: #cbd5e1;
-            margin-top: 4px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        .section-heading {
-            font-size: 1.3rem;
-            color: #ff007f;
-            text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
-            margin: 20px 0 15px 5px;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #ff007f;
+        .price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #b30000;
+            margin-bottom: 20px;
+        }
+
+        .details-btn {
             display: inline-block;
-            padding-bottom: 3px;
+            background-color: #b30000;
+            color: #white;
+            color: #ffffff;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
         }
 
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 20px;
-            background: rgba(20, 14, 35, 0.8);
-            border: 1px solid rgba(0, 243, 255, 0.3);
-            border-radius: 15px;
+        .details-btn:hover {
+            background-color: #8b0000;
         }
 
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
-            color: #64748b;
+            padding: 25px 20px;
+            background: #ffffff;
+            color: #666666;
             font-size: 0.85rem;
-            padding-bottom: 15px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        footer a {
+            color: #b30000;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="hero-banner">
-        <img src="ahmed.jpg" alt="Firdos Hosiery Logo" class="logo-img">
-        <h1 class="hero-title">FIRDOS HOSIERY</h1>
-        <p class="hero-subtitle">Quality Clothing & Collections</p>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-text">Firdos<br>Hosiery</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Premium Hosiery Collection</h1>
+        <p>Discover ultimate comfort and premium quality innerwear & casual garments crafted for everyday wear.</p>
+        <a href="#" class="explore-btn">Explore Shop</a>
+    </section>
+
+    <!-- Categories Heading -->
+    <h2 class="section-title">Featured Categories</h2>
+    <div class="title-underline"></div>
+
+    <!-- Products List -->
+    <div class="container">
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-header">Premium Cotton Vests</div>
+            <div class="product-body">
+                <h3>Classic Men's Vest</h3>
+                <p>100% combed cotton, breathable fabric for superior all-day comfort.</p>
+                <div class="price">₹149 onwards</div>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-header">Soft Briefs & Trunks</div>
+            <div class="product-body">
+                <h3>Classic Men's Brief</h3>
+                <p>Designed with elastic waistband and smooth stretchable fabric.</p>
+                <div class="price">₹129 onwards</div>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-header">Premium Cotton Socks</div>
+            <div class="product-body">
+                <h3>All-Season Sports Socks</h3>
+                <p>Cushioned sole with moisture-wicking tech to keep feet fresh.</p>
+                <div class="price">₹99 onwards</div>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="content-container">
-        <h2 class="section-heading">Welcome to Firdos Hosiery</h2>
-        <p style="color: #cbd5e1; margin-top: 10px;">Explore our premium collection and styles designed with comfort.</p>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Firdos Hosiery. All rights reserved.</p>
+        <p>© 2026 Firdos Hosiery. All Rights Reserved.</p>
+        <p style="margin-top: 5px;">Developed by <a href="https://github.com/farhad-web-dev" target="_blank">farhad-web-dev</a></p>
     </footer>
 
 </body>
