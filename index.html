@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firdos Hosiery | Quality Garments</title>
-    <!-- Google Search Console Verification Tag -->
-    <meta name="google-site-verification" content="YiTXofXgzL0b7BNLz76ZjfKQMBqYHdvXebNpvTJ4Ymk" />
-    
-    <!-- Favicon Logo Setup -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-
+    <title>Firdos Hosiery</title>
+    <!-- Favicon (Browser Tab Logo) -->
+    <link rel="icon" type="image/jpeg" href="ahmed.jpg">
     <style>
-        :root {
-            --primary: #b91c1c; /* Deep Red Theme */
-            --secondary: #1e293b;
-            --bg-light: #f8fafc;
-            --text-dark: #0f172a;
-            --text-muted: #64748b;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -27,257 +15,97 @@
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background-color: #0b0614;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding: 15px;
         }
 
-        /* Navbar with Logo Image */
-        nav {
-            background-color: white;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .nav-logo-img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-        }
-
-        nav .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .hero-banner {
             text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
+            padding: 25px 15px;
+            background: radial-gradient(circle, rgba(20,14,35,0.95) 0%, rgba(5,3,10,0.98) 100%);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 15px;
             margin-bottom: 25px;
-            max-width: 600px;
-        }
-
-        .btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #991b1b;
-        }
-
-        /* Products Section */
-        .container {
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary);
-            margin: 10px auto 0 auto;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-img {
-            height: 250px;
-            background-color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-weight: bold;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-info h3 {
-            font-size: 1.2rem;
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #00f3ff;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
             margin-bottom: 10px;
         }
 
-        .product-info p {
-            color: var(--text-muted);
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
             font-size: 0.95rem;
-            margin-bottom: 15px;
+            color: #cbd5e1;
+            margin-top: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
-        .price-tag {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 15px;
+        .section-heading {
+            font-size: 1.3rem;
+            color: #ff007f;
+            text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+            margin: 20px 0 15px 5px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #ff007f;
+            display: inline-block;
+            padding-bottom: 3px;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
-            color: white;
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
+            padding: 20px;
+            background: rgba(20, 14, 35, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 15px;
         }
 
-        footer p {
-            font-size: 0.9rem;
-            color: #94a3b8;
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 0.85rem;
+            padding-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation with Custom Logo -->
-    <nav>
-        <a href="#" class="nav-brand">
-            <img src="logo.jpg" alt="Firdos Hosiery Logo" class="nav-logo-img">
-            <span class="logo-text">Firdos Hosiery</span>
-        </a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="https://github.com/farhad-web-dev/my-portfolio-" target="_blank">Portfolio</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Banner -->
-    <section class="hero">
-        <h1>Premium Hosiery Collection</h1>
-        <p>Discover ultimate comfort and premium quality innerwear & casual garments crafted for everyday wear.</p>
-        <a href="#products" class="btn">Explore Shop</a>
-    </section>
-
-    <!-- Main Content / Products -->
-    <div class="container" id="products">
-        <h2 class="section-title">Featured Categories</h2>
-        
-        <div class="product-grid">
-            
-            <!-- Item 1 -->
-            <div class="product-card">
-                <div class="product-img" style="background: #fee2e2; color: #b91c1c;">Premium Cotton Vests</div>
-                <div class="product-info">
-                    <h3>Classic Men's Vest</h3>
-                    <p>100% combed cotton, breathable fabric for superior all-day comfort.</p>
-                    <div class="price-tag">₹149 onwards</div>
-                    <a href="#" class="btn" style="padding: 6px 20px; font-size: 0.9rem;">View Details</a>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="product-card">
-                <div class="product-img" style="background: #f0fdf4; color: #15803d;">Soft Briefs & Trunks</div>
-                <div class="product-info">
-                    <h3>Comfort Fit Trunks</h3>
-                    <p>Micro-fiber elastic waistband with double-layer patch support.</p>
-                    <div class="price-tag">₹199 onwards</div>
-                    <a href="#" class="btn" style="padding: 6px 20px; font-size: 0.9rem;">View Details</a>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="product-card">
-                <div class="product-img" style="background: #eff6ff; color: #1d4ed8;">Premium Cotton Socks</div>
-                <div class="product-info">
-                    <h3>All-Season Sports Socks</h3>
-                    <p>Cushioned sole with moisture-wicking tech to keep feet fresh.</p>
-                    <div class="price-tag">₹99 onwards</div>
-                    <a href="#" class="btn" style="padding: 6px 20px; font-size: 0.9rem;">View Details</a>
-                </div>
-            </div>
-
-        </div>
+    <div class="hero-banner">
+        <img src="ahmed.jpg" alt="Firdos Hosiery Logo" class="logo-img">
+        <h1 class="hero-title">FIRDOS HOSIERY</h1>
+        <p class="hero-subtitle">Quality Clothing & Collections</p>
     </div>
 
-    /* Footer */
+    <div class="content-container">
+        <h2 class="section-heading">Welcome to Firdos Hosiery</h2>
+        <p style="color: #cbd5e1; margin-top: 10px;">Explore our premium collection and styles designed with comfort.</p>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Firdos Hosiery. All Rights Reserved.</p>
-        <p style="margin-top: 5px; font-size: 0.8rem;">Developed by <a href="https://github.com/farhad-web-dev" target="_blank" style="color: white; text-decoration: underline;">farhad-web-dev</a></p>
+        <p>© 2026 Firdos Hosiery. All rights reserved.</p>
     </footer>
 
 </body>
